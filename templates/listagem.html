@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content %}
+
+<h1> Lista de Posts </h1>
+
+<ul>
+    {% for post in lista %}
+    <li>{{ post }} </li>
+    <a href="post/{{post.id}}">Link</a>
+    {% endfor %}
+</ul>
+{%endblock content %}

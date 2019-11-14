@@ -1,6 +1,20 @@
-<header>
-    <a href="{% url 'home' %}">Home</a> |
-    <a href="{% url 'sobre' %}">Sobre</a>
-</header>
-{% block content %}
-{% endblock content %}
+{% load static %}
+<html>
+
+<head>
+    <title>Postagens</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'listagem' %}">Postagem</a> | 
+        <a href="{% url 'post_new' %}">Novo Post</a> |   
+        <a href="{% url 'sobre' %}">Sobre</a>
+    </header>
+    {% block content %}
+    {% endblock content %}
+</body>
+
+</html>
